@@ -1,0 +1,60 @@
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;1,100&display=swap');
+
+/* Basisindstillinger */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'IBM Plex Mono', sans-serif;
+    background-color: lightpink;
+}
+
+/* Topmenu */
+header {
+    background-color: lightpink;
+    padding: 10px 0;
+}
+
+.menu {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+.menu li {
+    margin: 0 20px;
+}
+
+.menu a {
+    color: black;
+    text-decoration: none;
+    font-size: 13px;
+    font-style: italic;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: white;
+}
+
+/* Indhold */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+main img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 100px;
+    border-radius: 8px;
+}
+.iris{
+    margin-top: 260px;
+}
