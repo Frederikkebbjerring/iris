@@ -1,0 +1,115 @@
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;1,100&display=swap');
+
+/* Basisindstillinger */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'IBM Plex Mono', sans-serif;
+    background: linear-gradient(to bottom, lightblue, cornflowerblue);
+    min-height: 100%; /* gør at hele siden gradiere når man scroller */
+}
+
+/* Topmenu */
+header {
+    background-color: lightblue;
+    padding: 10px 0;
+}
+
+.menu {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+.menu li {
+    margin: 0 20px;
+}
+
+.menu a {
+    color: black;
+    text-decoration: none;
+    font-size: 13px;
+    font-style: italic;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: white;
+}
+
+/* Indhold */
+
+/*lydfil*/
+.images-sound {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.audio-container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 0px;
+}
+
+/*billeder og hover billederne*/
+.gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    width: 500px;
+    height: auto;
+}
+
+.default-img,
+.hover-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /*runde hjørner*/
+    transition: transform 0.3s ease, opacity 0.3s ease; /*glideende overgang mellem billede og hover billede*/
+}
+
+.hover-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0; /*gør at billedet starter usynligt*/
+}
+
+.gallery-item:hover .default-img {
+    opacity: 0; /*ændrer opacitetn når hover aktiveres*/
+    transform: none; 
+}
+
+.gallery-item:hover .hover-img {
+    opacity: 1; /*gør billedet synligt ved hover*/
+}
+
+/*animation defineres, hvor 0, 50 og 100%, angiver forsekllige trine i den*/
+@keyframes floatUpDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px); 
+    }
+    100% {
+        transform: translateY(0); 
+    }
+}
+
+.default-img {
+    animation: floatUpDown 3s ease-in-out infinite; 
+}
