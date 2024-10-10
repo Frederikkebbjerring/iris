@@ -1,0 +1,138 @@
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+/* Basisindstillinger */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* gør at margin og padding er inkluderet i størrelsen*/
+}
+
+body {
+    font-family: 'IBM Plex Mono', sans-serif;
+    background-color: floralwhite;
+}
+
+/* Topmenu */
+header {
+    background-color: floralwhite;
+    padding: 10px 0;
+}
+
+.menu {
+    list-style-type: none;
+    /* fjerner punkterene fra listen */
+    display: flex;
+    /* bruger flexbox til at lave menu*/
+    justify-content: center;
+}
+
+.menu li {
+    margin: 0 20px;
+}
+
+.menu a {
+    color: black;
+    text-decoration: none;
+    /* fjerner links fra menuen*/
+    font-size: 13px;
+    font-style: italic;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: darkgray;
+}
+
+/* Indhold */
+
+h1 {
+    margin-top: 10px;
+    font-family: 'abel', sans-serif;
+    font-size: 25px;
+    text-align: center;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 gør at der kommer kolonner */
+    grid-gap: 20px;
+    /* bestemmer afstanden mellem billederne */
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    /* centrerer galleriet i skærmen*/
+}
+
+.gallery-item {
+    text-align: center;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 1px;
+    transition: transform 0.3s ease;
+
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+
+}
+
+.hover-text {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    font-family: 'abel', sans-serif;
+    font-size: 14px;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 1px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+    /*gør at tekst boksen vises henover billederne*/
+}
+
+.gallery-item:hover .hover-text {
+    opacity: 1;
+    /*gør teksten synlig når musen er på billederne*/
+}
+
+
+.caption {
+    font-family: 'abel', sans-serif;
+    font-size: 14px;
+    margin-top: 8px;
+    color: black;
+}
+
+/* link i bunden */
+.link {
+    text-decoration: none;
+    font-family: 'abel', sans-serif;
+    text-align: center;
+    font-size: 12px;
+    font-style: italic;
+    color: black;
+    border: 2px solid floralwhite;
+    padding: 10px 20px;
+    border-radius: 0px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    /* gør overgangen glidende*/
+}
+
+.link:hover {
+    background-color: none;
+    color: darkgray;
+}
