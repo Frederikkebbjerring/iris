@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZ</title>
+    <style>
+        /* Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;1,100&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+        /* Basisindstillinger */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'IBM Plex Mono', sans-serif;
+            background-color: antiquewhite;
+        }
+
+        /* Topmenu */
+        header {
+            background-color: antiquewhite;
+            padding: 10px 0;
+        }
+
+        .menu {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        .menu li {
+            margin: 0 20px;
+        }
+
+        .menu a {
+            color: black;
+            text-decoration: none;
+            font-size: 13px;
+            font-style: italic;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .menu a:hover {
+            color: white;
+        }
+
+        /* Quizzen */
+        .quiz-container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: floralwhite;
+            border-radius: 0px;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'abel', sans-serif;
+            color: black;
+            font-size: 25px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .question {
+            font-family: 'abel', sans-serif;
+            color: black;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .options {
+            font-weight: normal;
+            color: black;
+            margin-bottom: 20px;
+        }
+
+        .options input {
+            margin-right: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-family: 'abel', sans-serif;
+            font-size: 12px;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 0px;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 12px;
+            font-family: 'abel', sans-serif;
+            font-size: 14px;
+            font-weight: normal;
+        }
+
+        /* Billedet i resultatet */
+        #result img {
+            width: 300px;
+            height: auto;
+            margin-top: 10px;
+            border-radius: 8px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <ul class="menu">
+            <li><a href="iris.html" #home>HOME</a></li>
+            <li><a href="aboutyou.html" #about>FOR YOU</a></li>
+            <li><a href="gallery.html" #gallery>ARCHIVE</a></li>
+            <li><a href="quiz.html" #message>QUIZ</a></li>
+        </ul>
+    </header>
+
+    <div class="quiz-container">
+        <h1>HVILKET SKYLLEMIDDEL SKAL JEG BRUGE?</h1>
+
+        <div class="question">
+            <p>1. Hvordan vil du helst have, at dit tøj dufter?</p>
+            <div class="options">
+                <input type="radio" name="q1" value="A"> Friskt<br>
+                <input type="radio" name="q1" value="B"> Af blomster<br>
+                <input type="radio" name="q1" value="C"> Mildt og naturligt<br>
+            </div>
+        </div>
+        <div class="question">
+            <p>2. Hvor ville du helst gå en tur?</p>
+            <div class="options">
+                <input type="radio" name="q2" value="A"> På en strand<br>
+                <input type="radio" name="q2" value="B"> På en blomstereng<br>
+                <input type="radio" name="q2" value="C"> I en skov<br>
+            </div>
+        </div>
+        <div class="question">
+            <p>3. Hvor ofte vasker du tøj?</p>
+            <div class="options">
+                <input type="radio" name="q3" value="A"> Hver dag<br>
+                <input type="radio" name="q3" value="B"> Et par gange om ugen<br>
+                <input type="radio" name="q3" value="C"> Så lidt som muligt<br>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>4. Hvordan skal dit hjem dufte, efter du har gjort rent?</p>
+            <div class="options">
+                <input type="radio" name="q4" value="A"> Rent og friskt <br>
+                <input type="radio" name="q4" value="B"> Som en buket blomster<br>
+                <input type="radio" name="q4" value="C"> Naturligt og roligt<br>
+            </div>
+        </div>
+        <div class="question">
+            <p>5. Hvad er din yndlings drik?</p>
+            <div class="options">
+                <input type="radio" name="q5" value="A"> Kaffe<br>
+                <input type="radio" name="q5" value="B"> Chai latte<br>
+                <input type="radio" name="q5" value="C"> Matcha <br>
+            </div>
+        </div>
+        <div class="question">
+            <p>6. Hvad er din drømme ferie destination?</p>
+            <div class="options">
+                <input type="radio" name="q6" value="A"> Badeferie på Mallorca<br>
+                <input type="radio" name="q6" value="B"> Skiferie i Østrig<br>
+                <input type="radio" name="q6" value="C"> Vandretur i Norge <br>
+            </div>
+        </div>
+        <div class="question">
+            <p>7. Hvad er din yndlings årstid?</p>
+            <div class="options">
+                <input type="radio" name="q7" value="A"> Forår<br>
+                <input type="radio" name="q7" value="B"> Sommer<br>
+                <input type="radio" name="q7" value="C"> Efterår<br>
+                <input type="radio" name="q7" value="D"> Vinter<br>
+            </div>
+        </div>
+        <div class="question">
+            <p>8. Hvad vil du mindst have, at dit tøj lugter af?</p>
+            <div class="options">
+                <input type="radio" name="q8" value="A"> Gnu<br>
+                <input type="radio" name="q8" value="B"> Kanin bur<br>
+                <input type="radio" name="q8" value="C"> Bål<br>
+            </div>
+        </div>
+
+        <button onclick="calculateResult()">Se resultat</button>
+
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function calculateResult() {
+            // Samler svarene i quizzen
+            var scoreA = 0,
+                scoreB = 0,
+                scoreC = 0;
+
+            for (var i = 1; i <= 8; i++) { // Opdateret til 8 spørgsmål
+                var answer = document.querySelector('input[name="q' + i + '"]:checked');
+                if (answer) {
+                    if (answer.value === 'A') {
+                        scoreA++;
+                    } else if (answer.value === 'B') {
+                        scoreB++;
+                    } else if (answer.value === 'C') {
+                        scoreC++;
+                    }
+                }
+            }
+
+            // Bestemmer resultatet i quizzen
+            var resultText = '';
+            var resultImage = '';
+
+            if (scoreA > scoreB && scoreA > scoreC) {
+                resultText = 'Du er et friskt og rent skyllemiddel! Prøv en af disse';
+                resultImage = 'frisk.jpg'; 
+            } else if (scoreB > scoreA && scoreB > scoreC) {
+                resultText = 'Du er et blomsterduftende skyllemiddel! Prøv en af disse';
+                resultImage = 'blomster.jpg'; 
+            } else {
+                resultText = 'Du er et naturligt skyllemiddel! Prøv en af disse';
+                resultImage = 'mild.jpg'; 
+            }
+
+            // Viser resultatet i quizzen med tekst og billede
+            document.getElementById('result').innerHTML = resultText + '<br><img src="' + resultImage + '" alt="Resultat billede">';
+        }
+
+    </script>
+
+</body>
+
+</html>
