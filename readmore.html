@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- gør siden tilpasser sig andre enheder -->
+    <title>Hvad er skyllemiddel?</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap'); /*font*/
+        body {
+            font-family:'abel', sans-serif;
+            background-color: floralwhite;
+            color: black;
+            line-height: 1.6;
+            padding: 20px;
+            text-align: justify;
+            position: relative;
+            /* gør at jeg kan placere "tilabge" btn, hvor jeg vil" */
+
+        }
+
+        h1 {
+            font-size: 15px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        p {
+            font-size: 14px;
+            margin-bottom: 20px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            /* margin left og right centerer teksten*/
+        }
+
+        .readmore {
+            font-weight: normal;
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+            /* gør at der ikke kommer streger under mit link */
+            color: cornflowerblue;
+            font-style: italic;
+        }
+
+        a:hover {
+            color: darkblue;
+        }
+
+        .back-button {
+            font-family: 'abel', sans-serif;
+            font-style: italic;
+            position: absolute;
+            /* gør at jeg kan placere min tilbage btn hvor jeg vil*/
+            top: 20px;
+            left: 20px;
+            /* top og left bestemmer placeringen*/
+            padding: 10px 20px;
+            background-color: floralwhite;
+            color: black;
+            border: none;
+            border-radius: 0px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+
+        .back-button:hover {
+            background-color: none;
+            color: darkgray;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <button class="back-button" onclick="goBack()">TILBAGE</button> <!-- Tilbage btn -->
+    <h1>HVAD ER SKYLLEMIDDEL?</h1>
+    <p> Skyllemiddel er et middel, der anvendes sammen med vaskemidler for at forbedre tøjvaskens resultater. Dets primære formål er at gøre tekstiler som tøj, håndklæder og sengelinned bløde og behagelige efter vask. Derudover reducerer skyllemiddel statisk elektricitet i stoffet og tilføjer ofte en behagelig duft, hvilket bidrager til en mere frisk og velduftende vaskeoplevelse.
+    </p>
+    <p class="readmore">
+        Læs mere om duft her:<br>
+        <a href="https://videnskab.dk/om-videnskabdk/naesen-kan-skelne-mellem-en-billion-dufte/" target="_blank"> VIDENSKAB </a>
+
+    </p>
+    <script>
+        function goBack() {
+            window.history.back(); // gør man kommer tilbage til arkiv siden
+        }
+
+    </script>
+</body>
+
+</html>
